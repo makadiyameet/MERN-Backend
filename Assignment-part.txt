@@ -1,0 +1,41 @@
+it was in user.js router
+
+//Home work task
+// const {getUserById, getUser, getAllUSerInDB, getAllUser} = require("../controllers/user");method-1
+// const {getUserById, getUser, getAllUSerInDB} = require("../controllers/user");method-2
+//router.get("/users" , getAllUSerInDB, getAllUser); method-1
+// router.get("/users" , getAllUSerInDB); method-2
+
+it was in user.js controllers
+
+//It was homeWORK AND I done it me
+
+// exports.getAllUSerInDB = (req, res, next) => {
+//     User.find().exec((err, user) => {
+//         if(err || !user){
+//             return res.status(400).json({
+//                 error: "NO users available in DB"
+//             })
+//         }
+//         req.profile = user;
+//         next();
+//     })
+// }
+
+// exports.getAllUser = (req, res) => {
+//     return res.json(req.profile);
+// }
+
+
+// another method-2
+
+// exports.getAllUSerInDB = (req, res) => {
+//     User.find().exec((err, users) => {
+//         if(err || !users){
+//             return res.status(400).json({
+//                 error: "NO users available in DB"
+//             })
+//         }
+//         res.json(users);
+//     })
+// }
