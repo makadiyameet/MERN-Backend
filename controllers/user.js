@@ -13,6 +13,7 @@ exports.getUserById = (req, res, next, id) => {
     });
 };
 
+
 exports.getUser = (req, res) => {
     //Way of deleting values from users
     // req.profile.salt = "";
