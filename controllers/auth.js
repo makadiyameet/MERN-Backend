@@ -17,8 +17,8 @@ exports.signup =  (req, res) => {
     const user = new User(req.body);
     user.save((err, user) => {
         if(err){
-            return res.status(400).jsen({
-                err: "NOT able to save user to DB"
+            return res.status(400).json({
+                error : "NOT able to save user to DB"
             });
         }
         res.json({
@@ -80,6 +80,7 @@ exports.signout =  (req, res) => {
 
 
 //protected routes //it is middle ware comming from express so do not require to add next()
+//this is responsible for passing token to backend
 exports.isSignedIn = expressJwt({
     secret: process.env.SECRET,
     userProperty: "auth"
